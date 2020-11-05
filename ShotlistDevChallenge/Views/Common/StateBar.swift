@@ -42,7 +42,10 @@ struct StateBar: View {
           }.frame(width: 15)
           
           if (i < (self.states.count - 1)) {
-            Spacer()
+            // MARK: Changed the Spacer() to VStacker with a Divider()
+            VStack{
+                Divider().padding(.bottom, 18)
+            }
           }
         }
       }

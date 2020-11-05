@@ -13,5 +13,5 @@ struct Shoot {
   var title: String
   var description: String
   
-  static var sample = Shoot(id: 1, title: "Sample Shotlist", description: "Sample Description")
+  static var sample = Shoot(id: 1, title: "Sample Shotlist", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.")
 }

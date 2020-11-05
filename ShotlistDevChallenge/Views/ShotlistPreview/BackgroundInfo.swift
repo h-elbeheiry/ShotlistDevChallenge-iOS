@@ -21,9 +21,16 @@ struct BackgroundInfo: View {
       }
       
       // MARK: TODO edit this description box
-      Text(description)
-        .font(.custom("Avenir-Roman", size: 12))
-        .foregroundColor(contentPrimary)
+        if #available(iOS 14.0, *) {
+            TextEditor(text: $description)
+                .font(.custom("Avenir-Roman", size: 14))
+                .foregroundColor(contentPrimary)
+        } else {
+            // Fallback on earlier versions
+            TextField(description, text: $description)
+                .font(.custom("Avenir-Roman", size: 14))
+                .foregroundColor(contentPrimary)
+        }
     }
   }
 }
